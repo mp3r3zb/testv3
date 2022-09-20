@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-hola-mundo-deployment
+  labels:
+    app: app-hola-mundo-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-hola-mundo-deployment
+  template:
+    metadata:
+      labels:
+        app: app-hola-mundo-deployment
+    spec:
+      containers:
+      - name: app-hola-mundo-deployment
+        image: 695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository@sha256:b34deb51bab5422c53ac5ff5d4533a5587a07c93b39706a1deb4760ac63d3a36
+        ports:
+        - containerPort: 80
