@@ -28,6 +28,9 @@ phases:
       - echo "Docker Image Push to ECR Completed -  695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository"
       # Deploy Docker App to EKS
       - echo "Build completed on `date`"
+      - echo "Delete the deployment image to ECR Repository"
+      - kubectl delete deployment app-hola-mundo-deployment
+      - kubectl delete service hola-mundo-service-load-balancer
       - echo "Deploying the Docker image to ECR Repository"
       - kubectl apply -f hola-mundo-v2.yaml
       - echo "Deploying the Docker service to expose app"
