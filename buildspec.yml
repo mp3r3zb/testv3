@@ -15,7 +15,7 @@ phases:
    - REPOSITORY_URI=${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME}
    - echo Install AWS Executable
    - curl -LO https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
-   - gunzip awscli-exe-linux-x86_64.zip
+   - tar zxvf awscli-exe-linux-x86_64.zip
    - chmod +x ./aws/dist/aws
    - mv ./aws/dist/aws /usr/local/bin/aws
    - echo Install Docker Executable
