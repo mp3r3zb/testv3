@@ -14,7 +14,7 @@ phases:
    - DEPLOYMENT_NAME=app-hola-mundo-deployment
    - REPOSITORY_URI=${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME}
    - curl -LO https://download.docker.com/linux/static/stable/x86_64/docker-20.10.9.tgz
-   - tar zxvf docker-20.10.9.tgz .
+   - tar zxvf docker-20.10.9.tgz
    - chmod +x ./docker/docker
    - mv ./docker/docker /usr/local/bin/docker   
    - echo Logging to AWS ECR…
