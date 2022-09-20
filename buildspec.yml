@@ -8,7 +8,7 @@ phases:
    - REGION=us-east-2
    - AWS_ACCOUNTID=695013654214
    - ECR_NAME=hello-repository
-   - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1–7)
+   # - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1–7)
    - IMAGE_TAG=${COMMIT_HASH:=latest}
    - EKS_NAME=clust-mpb
    - DEPLOYMENT_NAME=app-hola-mundo-deployment
