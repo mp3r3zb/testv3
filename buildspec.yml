@@ -26,10 +26,10 @@ phases:
       - echo "Pushing the Docker image to ECR Repository"
       - docker push 695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository
       - echo "Docker Image Push to ECR Completed -  695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository"
-	  # Deploy Docker App to EKS
+      # Deploy Docker App to EKS
       - echo "Build completed on `date`"
       - echo "Deploying the Docker image to ECR Repository"
       - kubectl apply -f hola-mundo-v2.yaml
-	  - echo "Deploying the Docker service to expose app"
-	  - kubectl expose deployment app-hola-mundo-deployment  --type=LoadBalancer  --name=hola-mundo-service-load-balancer
+      - echo "Deploying the Docker service to expose app"
+      - kubectl expose deployment app-hola-mundo-deployment  --type=LoadBalancer  --name=hola-mundo-service-load-balancer
       - echo "Docker Deploy Push to ECR Completed"
