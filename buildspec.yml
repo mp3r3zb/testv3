@@ -13,6 +13,7 @@ phases:
    - EKS_NAME=clust-mpb
    - DEPLOYMENT_NAME=app-hola-mundo-deployment
    - REPOSITORY_URI=${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME}
+   - apt install -y awscli git python3 unzip tar
    - echo Install AWS Executable
    - curl -LO https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
    - unzip awscli-exe-linux-x86_64.zip
