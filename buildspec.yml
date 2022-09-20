@@ -13,11 +13,11 @@ phases:
    - EKS_NAME=clust-mpb
    - DEPLOYMENT_NAME=app-hola-mundo-deployment
    - REPOSITORY_URI=${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME}
-   - echo Install AWS Executable
-   - curl -LO https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
-   - unzip -d . awscli-exe-linux-x86_64.zip
-   - chmod +x ./aws/dist/aws
-   - mv ./aws/dist/aws /usr/local/bin/aws
+   #- echo Install AWS Executable
+   #- curl -LO https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+   #- unzip -d . awscli-exe-linux-x86_64.zip
+   #- chmod +x ./aws/dist/aws
+   #- mv ./aws/dist/aws /usr/local/bin/aws
    - echo Install Docker Executable
    - curl -LO https://download.docker.com/linux/static/stable/x86_64/docker-20.10.9.tgz
    - tar zxvf docker-20.10.9.tgz
