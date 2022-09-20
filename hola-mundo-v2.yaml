@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app-hola-mundo-deployment
-        image: 695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository@sha256:b34deb51bab5422c53ac5ff5d4533a5587a07c93b39706a1deb4760ac63d3a36
+        image: 695013654214.dkr.ecr.us-east-2.amazonaws.com/hello-repository:latest
         ports:
         - containerPort: 80
